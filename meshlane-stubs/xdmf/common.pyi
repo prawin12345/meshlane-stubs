@@ -1,15 +1,14 @@
-import numpy as np
 from .._exceptions import ReadError as ReadError
 from .._mesh import CellBlock as CellBlock
-from numpy.typing import NDArray as NDArray
+from _typeshed import Incomplete
 
-numpy_to_xdmf_dtype: dict[str, tuple[str, str]]
-xdmf_to_numpy_type: dict[tuple[str, str], str]
-dtype_to_format_string: dict[str, str]
-meshio_to_xdmf_type: dict[str, list[str]]
-xdmf_to_meshio_type: dict[str, str]
-xdmf_idx_to_meshio_type: dict[int, str]
-meshio_type_to_xdmf_index: dict[str, int]
+numpy_to_xdmf_dtype: Incomplete
+xdmf_to_numpy_type: Incomplete
+dtype_to_format_string: Incomplete
+meshio_to_xdmf_type: Incomplete
+xdmf_to_meshio_type: Incomplete
+xdmf_idx_to_meshio_type: Incomplete
+meshio_type_to_xdmf_index: Incomplete
 
-def translate_mixed_cells(data: NDArray[np.integer]) -> list[CellBlock]: ...
-def attribute_type(data: np.ndarray) -> str: ...
+def translate_mixed_cells(data): ...
+def attribute_type(data): ...

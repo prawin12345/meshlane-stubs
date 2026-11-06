@@ -3,7 +3,7 @@ from ._exceptions import ReadError as ReadError
 from ._mesh import CellBlock as CellBlock
 from _typeshed import Incomplete
 
-vtk_to_meshio_type: dict[int, str]
+vtk_to_meshio_type: Incomplete
 meshio_to_vtk_type: Incomplete
 
 def vtk_to_meshio_order(vtk_type, dtype=...): ...

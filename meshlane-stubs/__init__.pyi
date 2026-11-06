@@ -4,4 +4,7 @@ from ._exceptions import ReadError as ReadError, WriteError as WriteError
 from ._helpers import deregister_format as deregister_format, extension_to_filetypes as extension_to_filetypes, read as read, register_format as register_format, write as write, write_points_cells as write_points_cells
 from ._mesh import CellBlock as CellBlock, Mesh as Mesh
 
-__all__ = ['_cli', 'abaqus', 'ansys', 'ansysInp', 'avsucd', 'cgns', 'dolfin', 'exodus', 'flac3d', 'gmsh', 'h5m', 'hmf', 'mdpa', 'med', 'medit', 'nastran', 'netgen', 'neuroglancer', 'obj', 'off', 'openfoam', 'ovm', 'permas', 'ply', 'stl', 'su2', 'svg', 'tecplot', 'tetgen', 'ugrid', 'vtk', 'vtu', 'wkt', 'xdmf', '__version__', 'ReadError', 'WriteError', 'deregister_format', 'extension_to_filetypes', 'read', 'register_format', 'write', 'write_points_cells', 'CellBlock', 'Mesh']
+__all__ = ['abaqus', 'ansys', 'ansysInp', 'avsucd', 'cgns', 'dolfin', 'exodus', 'flac3d', 'gmsh', 'h5m', 'hmf', 'mdpa', 'med', 'medit', 'nastran', 'netgen', 'neuroglancer', 'obj', 'off', 'ovm', 'permas', 'ply', 'stl', 'su2', 'svg', 'tecplot', 'tetgen', 'ugrid', 'vtk', 'vtu', 'wkt', 'xdmf', 'openfoam', '_cli', 'read', 'write', 'register_format', 'deregister_format', 'write_points_cells', 'extension_to_filetypes', 'Mesh', 'CellBlock', 'ReadError', 'WriteError', 'topological_dimension', '__version__']
+
+# Names in __all__ with no definition:
+#   topological_dimension
