@@ -1,13 +1,16 @@
 #!/bin/bash
 
-cd ../meshlane
+set -e
+
 source .venv/bin/activate
+
+cd ../meshlane
 git checkout typed
 git status
 git rev-parse --verify HEAD
 
-stubgen src/meshlane --include-docstrings
-rm -r ../meshlane-stubs/meshlane-stubs/*
-mv out/meshlane/* ../meshlane-stubs/meshlane-stubs/
-rm -d out/meshlane
-rm -d out
+cd -
+
+rm -r meshlane-stubs
+stubgen -p meshlane --search-path ../meshlane/src --include-docstrings -o .
+mv meshlane meshlane-stubs
