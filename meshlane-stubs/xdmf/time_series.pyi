@@ -1,4 +1,5 @@
 import numpy as np
+import os
 import types
 from .._common import cell_data_from_raw as cell_data_from_raw, raw_from_cell_data as raw_from_cell_data, write_xml as write_xml
 from .._exceptions import ReadError as ReadError, WriteError as WriteError
@@ -6,6 +7,7 @@ from .._mesh import CellBlock as CellBlock
 from .common import attribute_type as attribute_type, dtype_to_format_string as dtype_to_format_string, meshio_to_xdmf_type as meshio_to_xdmf_type, meshio_type_to_xdmf_index as meshio_type_to_xdmf_index, numpy_to_xdmf_dtype as numpy_to_xdmf_dtype, translate_mixed_cells as translate_mixed_cells, xdmf_to_meshio_type as xdmf_to_meshio_type, xdmf_to_numpy_type as xdmf_to_numpy_type
 from _typeshed import Incomplete
 from numpy.typing import ArrayLike as ArrayLike
+from typing import Self
 from xml.etree import ElementTree as ET
 
 class TimeSeriesReader:
@@ -16,8 +18,8 @@ class TimeSeriesReader:
     cells: Incomplete
     hdf5_files: Incomplete
     mesh_grid: Incomplete
-    def __init__(self, filename) -> None: ...
-    def __enter__(self): ...
+    def __init__(self, filename: str | os.PathLike[str]) -> None: ...
+    def __enter__(self) -> Self: ...
     def __exit__(self, *_) -> None: ...
     def read_points_cells(self): ...
     def read_data(self, k: int): ...

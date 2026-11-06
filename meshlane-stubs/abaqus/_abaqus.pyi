@@ -5,11 +5,13 @@ from .._files import is_buffer as is_buffer, open_file as open_file
 from .._helpers import register_format as register_format
 from .._mesh import CellBlock as CellBlock, Mesh as Mesh
 from _typeshed import Incomplete
+from os import PathLike
+from typing import IO
 
 abaqus_to_meshio_type: Incomplete
 meshio_to_abaqus_type: Incomplete
 
-def read(filename):
+def read(filename: str | PathLike[str] | IO[bytes]):
     """Reads a Abaqus inp file."""
 def read_buffer(f): ...
 def merge(mesh, points, cells, point_sets):
