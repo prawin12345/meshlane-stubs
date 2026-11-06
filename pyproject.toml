@@ -1,0 +1,19 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "meshlane-stubs"
+version = "0.1.0"
+description = "Provides stubfiles for meshlane."
+readme = "README.md"
+authors = [{ name = "prawin12345", email = "git@prawin.ch" }]
+requires-python = ">=3.10"
+dependencies = ["meshlane>=5.6"]
+
+
+[tool.setuptools]
+packages = ["meshlane-stubs"]
+
+[tool.setuptools.package-data]
+"meshlane-stubs" = ["*.pyi", "py.typed"]
