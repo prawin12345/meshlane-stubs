@@ -1,0 +1,6 @@
+from .._common import warn as warn
+from .._helpers import register_format as register_format
+from .._mesh import CellBlock as CellBlock, Mesh as Mesh
+
+def read(filename): ...
+def write(filename, mesh, add_global_ids: bool = True, compression: str = 'gzip', compression_opts: int = 4) -> None: ...

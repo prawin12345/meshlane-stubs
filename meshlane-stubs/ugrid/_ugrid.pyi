@@ -1,0 +1,13 @@
+from .._common import warn as warn
+from .._exceptions import ReadError as ReadError
+from .._files import open_file as open_file
+from .._helpers import register_format as register_format
+from .._mesh import CellBlock as CellBlock, Mesh as Mesh
+from _typeshed import Incomplete
+
+file_types: Incomplete
+
+def determine_file_type(filename): ...
+def read(filename): ...
+def read_buffer(f, file_type): ...
+def write(filename, mesh) -> None: ...
