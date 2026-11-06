@@ -16,9 +16,7 @@ dependencies = ["meshlane>=5.6"]
 packages = ["meshlane-stubs"]
 
 [tool.setuptools.package-data]
-"meshlane-stubs" = ["*.pyi", "py.typed"]
+"meshlane-stubs" = ["**/*.pyi", "py.typed"]
 
 [dependency-groups]
-dev = [
-    "mypy>=2.4.1",
-]
+dev = ["mypy>=2.4.1"]
